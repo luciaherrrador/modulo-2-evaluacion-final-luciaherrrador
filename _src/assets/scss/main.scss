@@ -1,1 +1,125 @@
-
+* {
+    margin: 0;
+    background-color: purple;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    margin: 15px;
+    color: black;
+    &-title {
+      text-decoration: none;
+      color: yellow;
+      font-family: "comic sans";
+      font-size: 40px;
+    }
+    &-input {
+      border-color: #fff;
+      color: #fff;
+      padding: 5px 0;
+      font-size: 18px;
+    }
+    &-button {
+      padding: 9px 12px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-left: 15px;
+      color:black;
+      background-color: yellow;
+      border-color:yellow;
+      &:hover {
+        background-color: gray;
+        border-color: gray;
+      }
+    }
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 300px auto;
+    margin-top: 30px;
+  }
+  .series-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .show-container {
+    display: block;
+    margin: 10px;
+    padding: 20px;
+    background-color:white;
+    color:gray;
+    cursor: pointer;
+   
+  }
+  .name-show {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 200px;
+    //color: white;
+    background-color: transparent;
+  }
+  .id-show {
+    display: none;
+  }
+  
+  .fav-title {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+  }
+  .fav-box-show {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px;
+  }
+  .fav-img-show {
+    width: 100px;
+  }
+  .fav-name-show {
+    font-size: 14px;
+    color:white;
+  }
+  .fav-id-show {
+    display: none;
+  }
+  .fav-delete {
+    height: 15px;
+    width: 15px;
+    background: url(../images/close.png) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+  .fav-deleteAll-show {
+    padding: 9px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 15px 0 0 15px;
+    color: black;
+    background-color: yellow;
+    border-color: yellow;
+    text-align: center;
+    &:hover {
+      background-color: gray;
+      border-color: gray;
+    }
+  }
+  .hidden {
+    display: none;
+  }
+  .fav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .fav-show {
+    background-color: grey;
+    color:white;
+  }
+  
+  
