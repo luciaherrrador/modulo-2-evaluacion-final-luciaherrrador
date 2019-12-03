@@ -9,12 +9,12 @@ const fav = document.querySelector('#fav-choose');
 let favList = [];
 let list = [];
 
-// LocalStorage
+// localStorage
 const getSavedFavsFromLocalStorage = JSON.parse(
-    localStorage.getItem("userFavs")
+    localStorage.getItem('userFavs')
 );
 const setFavsIntoLocalStorage = () => {
-    localStorage.setItem("userFavs", JSON.stringify(favList));
+    localStorage.setItem('userFavs', JSON.stringify(favList));
 };
 
 const getFromLocalStorage = () => {
@@ -27,8 +27,8 @@ const getFromLocalStorage = () => {
 };
 
 //feth
-const getDataFromAPI = event => {
-    event.preventDefault();
+const getDataFromAPI = ev => {
+    ev.preventDefault();
     const inputValue = input.value.toLowerCase();
     fetch(urlBase + inputValue)
         .then(response => response.json())
@@ -75,12 +75,12 @@ const paintSeries = arrShows => {
     }
 };
 
-//Clear fav in DOM
+//clear fav
 const clearFav = () => {
     fav.innerHTML = '';
 };
 
-//Paint fav in DOM
+//paint fav 
 const paintFav = () => {
     clearFav();
 
@@ -96,7 +96,7 @@ const paintFav = () => {
         const favBoxShow = document.createElement('li');
         favBoxShow.classList.add('fav-box-show');
         const favNameShow = document.createElement('h3');
-        favNameShow.classList.add("fav-name-show");
+        favNameShow.classList.add('fav-name-show');
         const favImgShow = document.createElement('img');
         favImgShow.classList.add('fav-img-show');
         const favDelete = document.createElement('div');
@@ -135,7 +135,7 @@ function deleteAll() {
     paintFav();
 }
 
-//Delete from fav
+//delete from fav
 function deleteFav(ev) {
     const trigger = ev.currentTarget;
     const parent = trigger.parentElement;
@@ -158,7 +158,7 @@ function deleteFav(ev) {
     setFavsIntoLocalStorage();
     paintFav();
 }
-//Pick series as fav
+//pick series as fav
 const pickAsFav = ev => {
     const trigger = ev.currentTarget;
     trigger.classList.toggle('fav-show');
@@ -179,7 +179,6 @@ const pickAsFav = ev => {
     setFavsIntoLocalStorage();
     paintFav();
 };
-
 
 getFromLocalStorage();
 button.addEventListener('click', getDataFromAPI);
