@@ -27,7 +27,7 @@ const getFromLocalStorage = () => {
 };
 
 //feth
-const getDatafromApi = event => {
+const getDataFromAPI = event => {
     event.preventDefault();
     const inputValue = input.value.toLowerCase();
     fetch(urlBase + inputValue)
@@ -180,5 +180,6 @@ const pickAsFav = ev => {
     paintFav();
 };
 
+
 getFromLocalStorage();
-button.addEventListener('click', getDatafromApi);
+button.addEventListener('click', getDataFromAPI);

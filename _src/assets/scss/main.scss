@@ -1,7 +1,7 @@
 * {
     margin: 0;
     background-color: purple;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Montserrat', sans-serif;
   }
   .search {
     display: flex;
@@ -13,7 +13,7 @@
     &-title {
       text-decoration: none;
       color: yellow;
-      font-family: "comic sans";
+      font-family: 'Montserrat', sans-serif;
       font-size: 40px;
     }
     &-input {
